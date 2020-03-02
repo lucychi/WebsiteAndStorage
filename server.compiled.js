@@ -1,3 +1,5 @@
+import path from 'path';
+
 const express = require('express');
 
 const PORT = process.env.HTTP_PORT || 8081;
