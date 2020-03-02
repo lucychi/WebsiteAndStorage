@@ -8,7 +8,7 @@ const app = express();
 //app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 app.get('/', (req, res) => {
-    res.send('just gonna send it');
+    res.send('Test! Test');
   });
   app.get('/flower', (req, res) => {
     res.json({
