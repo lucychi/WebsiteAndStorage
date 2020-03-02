@@ -6,24 +6,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       FirstName: '',
-      LastName: '',
-      flower: {}
+      LastName: ''
   }
 
-    this.getFlower();
     this.put_from_url = this.put_from_url.bind(this);
     this.GetUserName = this.GetUserName.bind(this);
   }
 
-  getFlower() {
-    fetch('/flower')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          flower: data
-        });
-      });
-  }
 
   put_from_url( ) {
     var request = require('request');
@@ -54,7 +43,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>{this.state.flower.name}</h1>
+        <h1>test</h1>
         <button onClick={this.put_from_url}> 
           Load data 
         </button>
