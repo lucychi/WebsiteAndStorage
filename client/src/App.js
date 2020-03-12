@@ -11,6 +11,7 @@ class App extends React.Component {
 
     this.put_from_url = this.put_from_url.bind(this);
     this.GetUserName = this.GetUserName.bind(this);
+    //this.output_query_result = this.output_query_result.bind(this);
   }
 
 
@@ -34,6 +35,12 @@ class App extends React.Component {
     })
   }
 
+  output_query_result =() => {
+    if(this.state.FirstName.localeCompare("Dimpsey")===0 && this.state.LastName.localeCompare("Robert")===0)
+      return (<p>id=65764 phone=4528769876 office=trulyhouse</p>);
+  }
+  
+
   GetUserName(event) {
     this.setState({
         [event.target.name]: event.target.value
@@ -55,7 +62,7 @@ class App extends React.Component {
           <label>Last name: </label>
           <input name="LastName" onChange={this.GetUserName} />
         </form>
-        <button> Query </button>
+        <button onClick={()=>{this.output_query_result()}}> Query </button>
       </div>
     );
   }
